@@ -1,1 +1,32 @@
-
+<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.uvic.cat%2Fsites%2Fdefault%2Ffiles%2Flogo_3linies_uvic_color.jpg&imgrefurl=https%3A%2F%2Fwww.uvic.cat%2Fes%2Frecursos-multimedia&tbnid=8JtbNysFKr2rFM&vet=12ahUKEwi7gPTsgJv4AhWE34UKHfQ_AuwQMygAegUIARCxAQ..i&docid=2sJ2f6LqrIGj1M&w=1274&h=555&q=uvic%20logo&ved=2ahUKEwi7gPTsgJv4AhWE34UKHfQ_AuwQMygAegUIARCxAQ" alt="Italian Trulli" style="width:200px;height:200px;">
+<p>________________________________________________________________________</p>
+<h1>Bioactivity Prediction Tool</h1>
+<p>Welcome to Biopredict, a bioactivity predictor for drug discovery!</p>
+<p>This app allows you to predict the bioactivity towards inhibiting SARS-COV&rsquo;s replicase polyprotein. Such enzyme is a drug target for CoVid-19.</p>
+<p>Upload potential molecules and predict the bioactivity, your research starts here!</p>
+<h2> What will you find here? </h2>
+<p>Here you will find the different scripts to build the app. Some steps are unnecessary for the app in itself but are very useful for a better understanding of machine learning and the environment surrounding drug discovery and data analysis. We encourage you to look through them and get inspired to start paving the path for bioinformatic tools and the future of science!</p>
+<h2>How does it work?</h2>
+<h3>Data collection</h3>
+<p>To begin with, a search for coronavirus targets is conducted and Replicase polyprotein is selected. The dataset is collected form ChEMBLE to get the bioactivity. The results are filtered with the standard type of IC50, and it is pre-processed dropping missing data, duplicates, and labelling compounds according to bioactivity threshold.</p>
+<h3>Exploratory data analysis</h3>
+<p>Smiles notations are cleaned by removing small organics compounds and salt. After that, the Lipinski descriptors are calculated. Lipinski&rsquo;s rule of five is used to evaluate drug likeness or determine if a chemical compound with a certain pharmacological or biological activity has chemical and physical properties that would make it a likely orally active drug in humans. To conclude this part, IC50 is converted to pIC50 applying log10 and visual plots and statistical analysis are carried out to explore the data.</p>
+<h3>Descriptor calculation</h3>
+<p>The generated file is input to PaDEL descriptor and the finger prints are calculated. An output file of the fingerprints and class label is obtained and combined with the pIC50 values into a dataframe.</p>
+<h3>Model building</h3>
+<p>The input feature is a dataset which contains input features and 1 output (pIC50). After that, the data is split into an 80/20 ratio. The 80% is used to train the model and the remaining 20% is used to test it. The model is built using Random Forest Regressor. The current model shows an r-squared of 0.78 and a mean squared error of 0.09. Last, the model is imported to the present web application.</p>
+<h2>Developers highlight</h2>
+<p>Dear user,</p>
+<p>Thank you for trusting our web application when predicting the bioactivity. Our team is pleased to help in your research with a time and cost-effective tool to select potential drugs for further experiments. Our crew consists of three young entrepreneurs who have found in bioinformatics a potential solution to day-to-day laboratory problems. Drug discovery and development pipelines are long, complex and depend on numerous factors. Machine learning approaches provide a set of tools that can improve discovery and decision making for well-specified questions with high quality data. We have constructed -and deployed into this web application- a model which predicts the bioactivity (pIC50) of one or more input molecules towards inhibiting SARS-COV2&rsquo;s Replicase Polyprotein.</p>
+<h2>Our team</h2>
+<p>Sergi Soldevila G&aacute;lvez, Gabriel Ruiz Al&iacute;as, Laia Vila Vidal</p>
+<p>In collaboration with Adri&aacute;n García Recio</p>
+<p><a href="https://www.uvic.cat/">Universitat de Vic - Universitat Central de Catalunya (UVIC - UCC)</a></p>
+<img src="https://www.uvic.cat/sites/default/files/logo_3linies_uvic_color.jpg" alt="HTML5 Icon" style="width:200px;height:75px;">
+<h2>Contact us</h2>
+<p>For further information please contact us by mail:</p>
+<a href="mailto:sergi.soldevila@uvic.cat">Sergi Soldevila</a> <p> </p>
+<a href="mailto:gabriel.ruiz@uvic.cat">Gabriel Ruiz</a> <p> </p>
+<a href="mailto:laia.vila@uvic.cat">Laia Vila</a>
+<h2>Credits</h2>
+<p>This app is built in Python inspired by Chanin Nantassenamat&rsquo;s <a href="https://github.com/dataprofessor/">(Data Professor)</a> bioinformatics project and the descriptors are calculated using <a href="http://www.yapcwsoft.com/dd/padeldescriptor/">PaDEL-Descriptor</a>.</p>
