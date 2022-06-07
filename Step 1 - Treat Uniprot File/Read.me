@@ -1,1 +1,20 @@
-
+The correct order to use these scripts is the following:
+  - Add gene name to original file:
+    - 1. Glutamatergicsynapse to Glutamatergicsynapse+GN
+    
+  - Retreive ClinVar data:
+    - 2. Get the Gene Names from the original file
+    - 3. Generate a link to search all genes in clinvar
+    
+  - Retrieve GnomAD data:
+    - 4. Web scraping gnomAD
+  
+  - Treat ClinVar File to get File2:
+    - 5. Treat ClinVar file to get File 2 ClinVar
+   
+  - Treat gnomAD files to get File2:
+    - 6. Treat GnomAD file to get File 2 GnomAD
+  
+  - Get the file 1 (File of Counts)
+    - 7. Sort Values by condition
+    - 8. Table of counts program v3 (Final and working version)
